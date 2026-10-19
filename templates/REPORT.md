@@ -39,6 +39,35 @@ bookstore-relevant examples.
 For each of the six scenarios: smoke / regression / slow (may be more than one)
 with a 2-3 sentence justification.
 
+## Scenario 1: Password-reset email
+
+Test type: Smoke testing, if checking that password reset works; slow testing only if the test is specifically designed to measure performance.
+Reason: Password reset is an important feature. A smoke test can check that the reset process works correctly.
+
+## Scenario 2: Previously fixed shipping-cost bug
+
+Test type: Regression testing.
+Reason: The test checks that a bug fixed in the past does not happen again after code changes.
+
+## Scenario 3: Nightly sales report using ten years of orders
+
+Test type: Slow testing.
+Reason: Processing ten years of orders may take a long time and requires a large amount of data.
+
+## Scenario 4: Payment page after deployment
+
+Test type: Smoke testing.
+Reason: Checking that the payment page loads confirms that an important part of the application is working after deployment.
+
+## Scenario 5: Double refund problem
+
+Test type: Regression testing.
+Reason: The test checks that the system does not repeat a previously identified problem that could cause an incorrect refund.
+
+## Scenario 6: Recommendation engine with one million book titles
+
+Test type: Slow testing.
+Reason: Processing one million book titles can require significant processing time and resources, so the test is suitable for a slow test suite.
 
 ## Part F -- Team reflection
 1. Why is running only regression tests before every commit inefficient?
